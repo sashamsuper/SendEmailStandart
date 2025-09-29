@@ -21,14 +21,14 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore ./SendEmail.csproj
+      run: dotnet restore ./SendEmailStandart.csproj
     - name: Build
-      run: dotnet build ./SendEmail.csproj --no-restore
+      run: dotnet build ./SendEmailStandart.csproj --no-restore
     - name: Test
-      run: dotnet test ./SendEmail.csproj --no-build --verbosity normal
+      run: dotnet test ./SendEmailStandart.csproj --no-build --verbosity normal
     - name: Publish  
       uses: brandedoutcast/publish-nuget@v2.5.4 
       with:
-        PROJECT_FILE_PATH: ./SendEmail.csproj
+        PROJECT_FILE_PATH: ./SendEmailStandart.csproj
         NUGET_KEY: ${{secrets.NUGET_KEY_REPR}} 
 
