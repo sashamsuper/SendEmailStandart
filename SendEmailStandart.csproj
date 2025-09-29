@@ -7,6 +7,7 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <LangVersion>latestMajor</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
+    <Copyright>©sashamsuper, 2020-2025</Copyright>
   </PropertyGroup>
   <PropertyGroup>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -16,8 +17,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject></StartupObject>
-    <Version>0.0.3-alpha.1</Version>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Version>0.0.4-alpha</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <OutputPath>bin\x64\Debug\</OutputPath>
@@ -95,9 +96,6 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="ZipAndEmail - Копировать.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +107,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <PackageTags>mail; email; wrapper</PackageTags>
+    <PackageProjectUrl>https://github.com/sashamsuper/SendEmailStandart</PackageProjectUrl>
+  </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
