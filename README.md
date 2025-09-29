@@ -1,4 +1,4 @@
-©sashamsuper, 2020–2025
+Â©sashamsuper, 2020â€“2025
 # SendEmailStandart
 Wrapper for MailKit
 
